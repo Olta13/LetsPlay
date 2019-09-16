@@ -1,5 +1,5 @@
 const clientId = '9f88251b18ba4c0fb868291c8a5a7d35';
-const redirectUri = 'http://localhost:3000';
+const redirectUri = 'http://teeny-tiny-distribution.surge.sh';
 let accessToken;
 
 const Spotify = {
@@ -71,7 +71,7 @@ const Spotify = {
         ).then(jsonResponse => {
             userId = jsonResponse.id; 
             //93.Use the returned user ID to make a POST request
-            return fetch(`https://api.spotify.com/v1/users/${userId}/playlist`,
+            return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`,
             {
                 headers: headers,
                 method: 'POST',
